@@ -11,7 +11,7 @@ class MainClass
         int i2;
         x = 1;
         y = 2;
-        z = x + y;
+        z = x*3;
 
         b1 = true;
         Console.WriteLine("Hello World");

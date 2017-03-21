@@ -12,7 +12,7 @@
   .hash algorithm 0x00008004
   .ver  0:0:0:0
 }
-.module main.exe // GUID = {8A747AEE-9A49-4158-881F-07BEAD00A3DB}
+.module main.exe // GUID = {7E7B8E22-B557-45F6-88B1-2106A9976EBD}
 
 
   .class private auto ansi beforefieldinit MainClass
@@ -41,7 +41,7 @@
     {
         // Method begins at RVA 0x2058
 	.entrypoint
-	// Code size 45 (0x2d)
+	// Code size 41 (0x29)
 	.maxstack 2
 	.locals init (
 		bool	V_0,
@@ -51,14 +51,14 @@
 	IL_0006:  ldc.i4.2 
 	IL_0007:  stsfld int32 MainClass::y
 	IL_000c:  ldsfld int32 MainClass::x
-	IL_0011:  ldsfld int32 MainClass::y
-	IL_0016:  add 
-	IL_0017:  stsfld int32 MainClass::z
-	IL_001c:  ldc.i4.1 
-	IL_001d:  stsfld bool MainClass::b1
-	IL_0022:  ldstr "Hello World"
-	IL_0027:  call void class [mscorlib]System.Console::WriteLine(string)
-	IL_002c:  ret 
+	IL_0011:  ldc.i4.3 
+	IL_0012:  mul 
+	IL_0013:  stsfld int32 MainClass::z
+	IL_0018:  ldc.i4.1 
+	IL_0019:  stsfld bool MainClass::b1
+	IL_001e:  ldstr "Hello World"
+	IL_0023:  call void class [mscorlib]System.Console::WriteLine(string)
+	IL_0028:  ret 
     } // end of method MainClass::Main
 
   } // end of class MainClass
