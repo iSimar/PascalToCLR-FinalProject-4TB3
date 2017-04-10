@@ -92,6 +92,12 @@
 			mul
 			ldc.i4.7
 			stelem.i4
+			ldarg.1
+			ldfld class a r::g
+			ldfld int32[] a::arr
+			ldc.i4.6
+			ldelem.i4
+			call void class [mscorlib]System.Console::Write(int32)
 			ret
 		}
 	}
@@ -135,9 +141,22 @@
 		ldc.i4.3
 		ldelem.i4
 		call void class [mscorlib]System.Console::Write(int32)
+		call void class [mscorlib]System.Console::WriteLine()
 		ldsfld class a MainClass::v
 		ldsfld class r MainClass::w
 		call void class MainClass/q::main_proc(class a, class r)
+		call void class [mscorlib]System.Console::WriteLine()
+		ldsfld class a MainClass::v
+		ldfld int32[] a::arr
+		ldc.i4.7
+		ldelem.i4
+		call void class [mscorlib]System.Console::Write(int32)
+		ldsfld class r MainClass::w
+		ldfld class a r::g
+		ldfld int32[] a::arr
+		ldc.i4.6
+		ldelem.i4
+		call void class [mscorlib]System.Console::Write(int32)
 		ret
 	}
 	.method private static hidebysig specialname rtspecialname
