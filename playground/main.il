@@ -1,172 +1,70 @@
-.assembly extern mscorlib{}
-.assembly 'main'{}
-
-
-.class private auto ansi beforefieldinit a
-	extends [mscorlib]System.Object
+.assembly extern mscorlib
 {
-	.field  public int32[] arr
-	.method public hidebysig specialname rtspecialname
-		instance default void '.ctor' ()  cil managed 
-	{
-		.maxstack 8
-		ldarg.0
-		ldc.i4.s 0x8
-		newarr [mscorlib]System.Int32
-		stfld int32[] a::arr
-		ldarg.0
-		call instance void object::'.ctor'()
-		ret
-	}
+  .ver 4:0:0:0
+  .publickeytoken = (B7 7A 5C 56 19 34 E0 89 ) // .z\V.4..
 }
-.class private auto ansi beforefieldinit r
-	extends [mscorlib]System.Object
+.assembly 'main'
 {
-	.field  public int32 f
-	.field  public class a g
-	.field  public int32 h
-	.method public hidebysig specialname rtspecialname
-		instance default void '.ctor' ()  cil managed 
-	{
-		.maxstack 8
-		ldarg.0
-		newobj instance void class a::'.ctor'()
-		stfld class a r::g
-		ldarg.0
-		call instance void object::'.ctor'()
-		ret
-	}
+  .custom instance void class [mscorlib]System.Runtime.CompilerServices.RuntimeCompatibilityAttribute::'.ctor'() =  (
+		01 00 01 00 54 02 16 57 72 61 70 4E 6F 6E 45 78   // ....T..WrapNonEx
+		63 65 70 74 69 6F 6E 54 68 72 6F 77 73 01       ) // ceptionThrows.
+
+  .hash algorithm 0x00008004
+  .ver  0:0:0:0
 }
+.module main.exe // GUID = {0A225ECB-2B14-4E7C-B9EF-C587133DDE7C}
 
 
-.class private auto ansi beforefieldinit MainClass
-	extends [mscorlib]System.Object
-{
-	.field static class a v
-	.field static class r w
-	.field static int32 x
-	
+  .class private auto ansi beforefieldinit MainClass
+  	extends [mscorlib]System.Object
+  {
+    .field  private static  bool t
+    .field  private static  bool b
+    .field  private static  int32 x
+    .field  private static  int32 y
 
-	.class nested private auto ansi beforefieldinit q
-		extends [mscorlib]System.Object
-	{
-		.method public static hidebysig
-			default void main_proc (class a c, class r d)  cil managed
-		{
-			.locals init (
-				int32 V_0)
-			ldc.i4.3
-			stloc.0
-			ldarg.1
-			ldfld int32 r::h
-			call void class [mscorlib]System.Console::Write(int32)
-			ldarg.0
-			ldfld int32[] a::arr
-			ldc.i4.1
-			ldelem.i4
-			call void class [mscorlib]System.Console::Write(int32)
-			ldarg.1
-			ldfld class a r::g
-			ldfld int32[] a::arr
-			ldloc.0
-			ldelem.i4
-			call void class [mscorlib]System.Console::Write(int32)
-			call void class [mscorlib]System.Console::WriteLine()
-			ldarg.0
-			ldfld int32[] a::arr
-			ldc.i4.7
-			ldc.i4.7
-			stelem.i4
-			ldarg.0
-			ldfld int32[] a::arr
-			ldloc.0
-			ldc.i4.4
-			add
-			ldelem.i4
-			call void class [mscorlib]System.Console::Write(int32)
-			ldarg.1
-			ldfld class a r::g
-			ldfld int32[] a::arr
-			ldloc.0
-			ldc.i4.2
-			mul
-			ldc.i4.7
-			stelem.i4
-			ldarg.1
-			ldfld class a r::g
-			ldfld int32[] a::arr
-			ldc.i4.6
-			ldelem.i4
-			call void class [mscorlib]System.Console::Write(int32)
-			ret
-		}
-	}
-	
+    // method line 1
+    .method public hidebysig specialname rtspecialname 
+           instance default void '.ctor' ()  cil managed 
+    {
+        // Method begins at RVA 0x2050
+	// Code size 7 (0x7)
+	.maxstack 8
+	IL_0000:  ldarg.0 
+	IL_0001:  call instance void object::'.ctor'()
+	IL_0006:  ret 
+    } // end of method MainClass::.ctor
 
-	.method private static hidebysig default void Main (string[] args)
-		cil managed
-	{
-		.entrypoint
-		ldc.i4.s 0x9
-		stsfld int32 MainClass::x
-		ldsfld class r MainClass::w
-		ldc.i4.5
-		stfld int32 r::h
-		ldsfld class r MainClass::w
-		ldfld int32 r::h
-		call void class [mscorlib]System.Console::Write(int32)
-		ldsfld class a MainClass::v
-		ldfld int32[] a::arr
-		ldc.i4.1
-		ldc.i4.3
-		stelem.i4
-		ldsfld class a MainClass::v
-		ldfld int32[] a::arr
-		ldsfld int32 MainClass::x
-		ldc.i4.8
-		sub
-		ldelem.i4
-		call void class [mscorlib]System.Console::Write(int32)
-		ldsfld class r MainClass::w
-		ldfld class a r::g
-		ldfld int32[] a::arr
-		ldsfld int32 MainClass::x
-		ldc.i4.3
-		div
-		ldc.i4.s 0x9
-		stelem.i4
-		ldsfld class r MainClass::w
-		ldfld class a r::g
-		ldfld int32[] a::arr
-		ldc.i4.3
-		ldelem.i4
-		call void class [mscorlib]System.Console::Write(int32)
-		call void class [mscorlib]System.Console::WriteLine()
-		ldsfld class a MainClass::v
-		ldsfld class r MainClass::w
-		call void class MainClass/q::main_proc(class a, class r)
-		call void class [mscorlib]System.Console::WriteLine()
-		ldsfld class a MainClass::v
-		ldfld int32[] a::arr
-		ldc.i4.7
-		ldelem.i4
-		call void class [mscorlib]System.Console::Write(int32)
-		ldsfld class r MainClass::w
-		ldfld class a r::g
-		ldfld int32[] a::arr
-		ldc.i4.6
-		ldelem.i4
-		call void class [mscorlib]System.Console::Write(int32)
-		ret
-	}
-	.method private static hidebysig specialname rtspecialname
-		default void '.cctor' ()  cil managed 
-	{
-		.maxstack 8
-		newobj instance void class a::'.ctor'()
-		stsfld class a MainClass::v
-		newobj instance void class r::'.ctor'()
-		stsfld class r MainClass::w
-		ret
-	}
-}
+    // method line 2
+    .method private static hidebysig 
+           default void Main (string[] args)  cil managed 
+    {
+        // Method begins at RVA 0x2058
+	.entrypoint
+	// Code size 63 (0x3f)
+	.maxstack 8
+	IL_0000:  ldc.i4.1 
+	IL_0001:  stsfld bool MainClass::t
+	IL_0006:  ldsfld int32 MainClass::x
+	IL_000b:  ldsfld int32 MainClass::y
+	IL_0010:  bgt IL_001c
+
+	IL_0015:  ldsfld bool MainClass::t
+	IL_001a:  br.s IL_001d
+
+	IL_001c:  ldc.i4.1 
+	IL_001d:  stsfld bool MainClass::b
+	IL_0022:  ldsfld bool MainClass::b
+	IL_0027:  brfalse IL_0037
+
+	IL_002c:  ldc.i4.7 
+	IL_002d:  call void class [mscorlib]System.Console::Write(int32)
+	IL_0032:  br IL_003e
+
+	IL_0037:  ldc.i4.s 0x09
+	IL_0039:  call void class [mscorlib]System.Console::Write(int32)
+	IL_003e:  ret 
+    } // end of method MainClass::Main
+
+  } // end of class MainClass
+
